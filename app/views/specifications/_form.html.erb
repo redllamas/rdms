@@ -1,0 +1,57 @@
+<%= form_with(model: specification, class: "contents") do |form| %>
+  <% if specification.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-md mt-3">
+      <h2><%= pluralize(specification.errors.count, "error") %> prohibited this specification from being saved:</h2>
+
+      <ul class="list-disc ml-6">
+        <% specification.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-5">
+    <%= form.label :variant_id %>
+    <%= form.text_field :variant_id, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": specification.errors[:variant_id].none?, "border-red-400 focus:outline-red-600": specification.errors[:variant_id].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :max_op %>
+    <%= form.text_field :max_op, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": specification.errors[:max_op].none?, "border-red-400 focus:outline-red-600": specification.errors[:max_op].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :max_ap %>
+    <%= form.text_field :max_ap, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": specification.errors[:max_ap].none?, "border-red-400 focus:outline-red-600": specification.errors[:max_ap].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :max_ot %>
+    <%= form.text_field :max_ot, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": specification.errors[:max_ot].none?, "border-red-400 focus:outline-red-600": specification.errors[:max_ot].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :max_at %>
+    <%= form.text_field :max_at, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": specification.errors[:max_at].none?, "border-red-400 focus:outline-red-600": specification.errors[:max_at].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :max_dp %>
+    <%= form.text_field :max_dp, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": specification.errors[:max_dp].none?, "border-red-400 focus:outline-red-600": specification.errors[:max_dp].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :min_op %>
+    <%= form.text_field :min_op, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": specification.errors[:min_op].none?, "border-red-400 focus:outline-red-600": specification.errors[:min_op].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :specs %>
+    <%= form.text_field :specs, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": specification.errors[:specs].none?, "border-red-400 focus:outline-red-600": specification.errors[:specs].any?}] %>
+  </div>
+
+  <div class="inline">
+    <%= form.submit class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>

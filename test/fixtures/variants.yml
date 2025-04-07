@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product: one
+  body_material: MyString
+  size_mm: MyString
+
+two:
+  product: two
+  body_material: MyString
+  size_mm: MyString
