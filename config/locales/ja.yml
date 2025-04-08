@@ -1,0 +1,54 @@
+ja:
+  activerecord:
+    attributes:
+      product:
+        name: "型式名"
+        description: "説明"
+        subsubcategory_id: "小区分"
+        subsubcategory: "小区分"
+        subcategory_id: "中区分"
+        subcategory: "中区分"
+        category_id: "大区分"
+        category: "大区分"
+        variant_id: "仕様"
+        variant: "仕様"
+        variants: "仕様"
+  products:
+    form:
+      choose_subsubcategory: "小区分を選択してください"
+      submit: "製品を保存"
+    new:
+      title: "製品を作成する"
+      heading: "製品を作成する"
+      back_to_products: "一覧に戻る"
+    index:
+      title: "製品一覧"
+      heading: "製品一覧"
+      new_product: "製品を作成する"
+      show: "表示"
+      edit: "編集"
+      destroy: "削除"
+      confirm_destroy: "本当に削除しますか？"
+      no_products: "製品が見つかりませんでした。"
+      actions: "アクション"
+      variants: "仕様"
+      add_variant: "仕様を追加"
+      no_variants: "仕様が見つかりませんでした。"
+      no_categories: "大区分が見つかりませんでした。"
+      no_subsubcategories: "小区分が見つかりませんでした。"
+      no_subcategories: "中区分が見つかりませんでした。"
+    edit:
+      title: "製品を編集"
+      heading: "製品を編集"
+      submit: "更新"
+      show_product: "表示"
+      back_to_products: "一覧に戻る"
+    show:
+      title: "製品を表示"
+      heading: "製品を表示"
+      edit_product: "編集"
+      back_to_products: "一覧に戻る"
+      destroy_product: "削除"
+      confirm_destroy: "本当に削除しますか？"
+  language:
+    select: "言語を選択"

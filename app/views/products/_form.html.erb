@@ -12,21 +12,21 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": product.errors[:name].none?, "border-red-400 focus:outline-red-600": product.errors[:name].any?}] %>
+    <%= form.label :name, t('activerecord.attributes.product.name') %>
+    <%= form.text_field :name, value: Mobility.with_locale(I18n.locale) { product.name }, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": product.errors[:name].none?, "border-red-400 focus:outline-red-600": product.errors[:name].any?}] %>
   </div>
 
   <div class="my-5">
-    <%= form.label :description %>
-    <%= form.textarea :description, rows: 4, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": product.errors[:description].none?, "border-red-400 focus:outline-red-600": product.errors[:description].any?}] %>
+    <%= form.label :description, t('activerecord.attributes.product.description') %>
+    <%= form.text_area :description, value: Mobility.with_locale(I18n.locale) { product.description }, rows: 4, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": product.errors[:description].none?, "border-red-400 focus:outline-red-600": product.errors[:description].any?}] %>
   </div>
 
   <div class="my-5">
-    <%= form.label :subsubcategory_id %>
-    <%= form.collection_select :subsubcategory_id, Subsubcategory.all, :id, :name, prompt: "Choose subsubcategory", class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": product.errors[:subsubcategory_id].none?, "border-red-400 focus:outline-red-600": product.errors[:subsubcategory_id].any?}] %>
+    <%= form.label :subsubcategory_id, t('activerecord.attributes.product.subsubcategory_id') %>
+    <%= form.collection_select :subsubcategory_id, Subsubcategory.all, :id, :name, prompt: t('products.form.choose_subsubcategory', default: "Choose subsubcategory"), class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": product.errors[:subsubcategory_id].none?, "border-red-400 focus:outline-red-600": product.errors[:subsubcategory_id].any?}] %>
   </div>
 
   <div class="inline">
-    <%= form.submit class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.submit t('products.form.submit', default: "Save Product"), class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>

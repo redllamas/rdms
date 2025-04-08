@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :documents
   resources :specifications
-  resources :variants
-  resources :products
+  resources :products do
+    resources :variants
+  end
   resources :subsubcategories
   resources :subcategories
   resources :categories
